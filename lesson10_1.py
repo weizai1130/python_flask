@@ -1,6 +1,9 @@
 import streamlit as st
 
-if st.button("say Hello!",key="myButton"):
-    st.write("wht hello there")
+def button_click():
+    st.write(st.session_state)
+
+if st.button("say Hello!",key='myButton',on_click=button_click):
+    st.write("Why hello there")
 else:
-    st.write("goodbye")
+    st.write("Goodbye")
